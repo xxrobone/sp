@@ -1,8 +1,9 @@
 // using this for now, might chnage to styled components
 
 .container {
+    margin: 2rem auto;
     display: flex;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     align-items: center;
@@ -26,24 +27,28 @@
   }
   .item-header-heading {
     width: 50%;
-    font-size: 18px;
+    font-size: clamp(1.25rem, 1.75vw, 1.75rem);
     font-weight: bold;
     text-transform: uppercase;
-    font-family: var(--font-alt);
+    font-family: var(--font-poppins);
   }
   .item-header-heading2 {
-    font-size: 10px;
+    font-size: clamp(1rem, 2vw, 1.4rem);
     font-weight: bold;
     text-transform: uppercase;
-    font-family: var(--font-primary-light);
+    font-family: var(--font-poppins);
   }
   .item-image {
-    height: 360px;
-    background-color: gray;
+    height: 260px;
+    background-color: #ffffff;
     margin: 10px 0px;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
     overflow: hidden;
+
+    @media (min-width: 768px) {
+        height: 360px;
+    }
   }
   
   .item-image:hover {

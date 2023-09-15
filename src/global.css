@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:wght@400;500;600;700&display=swap');
+
 @font-face {
   font-family: CaviarDreams;
   src: url('./assets/fonts/CaviarDreams.ttf');
@@ -33,8 +35,8 @@ html {
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: rgba(26, 26, 26, 0.87);
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -46,4 +48,7 @@ html {
   --font-primary: SourcePro;
   --font-primary-light: SourceProLight;
   --font-alt: CaviarDreams;
+
+  --font-audio: 'Audiowide', cursive;
+  --font-poppins: 'Poppins', sans-serif;
 }

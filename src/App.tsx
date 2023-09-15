@@ -1,20 +1,25 @@
 import './App.css';
 import HoverEffect from './components/hovereffect/HoverEffect';
-import image1 from './assets/images/nike1.png';
-import image2 from './assets/images/nike2.png';
+import image1 from './assets/images/nike4.png';
+import image2 from './assets/images/nike3.png';
+import swoosh from './assets/images/nikeswoosh.png';
 
 function App() {
   return (
-    <>
-      <h1>Clean project</h1>
+    <div className='main'>
+      <h1>SneakerSpot</h1>
+      <div>
+        <h2>Collab with</h2>
+        <img src={swoosh} alt='swoosh' className='img'></img>
+      </div>
       <HoverEffect
-        title='Get your new shoes'
+        title="Air Force 1's"
         subtitle='2024'
-        desc='Only at Sneaker Spot'
+        desc='Only @sneakerspot'
         img1={image1}
         img2={image2}
       />
-    </>
+    </div>
   );
 }
 

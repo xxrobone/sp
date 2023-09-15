@@ -4,3 +4,27 @@
   overflow: hidden;
   margin: 0;
 }
+
+.main {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: space-around;
+
+  > h1 {
+    font-size: 4rem;
+    font-family: var(--font-audio);
+    -webkit-text-stroke: 0.1rem black;
+    font-size: calc(3.5vmin + 2vmax);
+    color: transparent;
+  }
+
+  .img {
+    max-width: clamp(16rem, 30vw, 22rem);
+    object-fit: cover;
+    object-position: center;
+    filter: drop-shadow(5px 5px 10px rgb(128, 128, 128));
+  }
+}
