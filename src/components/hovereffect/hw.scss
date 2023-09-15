@@ -1,0 +1,59 @@
+// using this for now, might chnage to styled components
+
+.container {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .item {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: clamp(300px, 50vw, 400px);
+  }
+  
+  .item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed antiquewhite;
+  }
+  .item-header-heading {
+    width: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: var(--font-alt);
+  }
+  .item-header-heading2 {
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: var(--font-primary-light);
+  }
+  .item-image {
+    height: 360px;
+    background-color: gray;
+    margin: 10px 0px;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+  }
+  
+  .item-image:hover {
+    cursor: pointer;
+  }
+  
+  .item-footer {
+    display: flex;
+    align-items: center;
+    border-top: 1px dashed antiquewhite;
+    padding-top: 5px;
+    font-family: var(--font-primary-light);
+  }
