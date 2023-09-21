@@ -6,9 +6,20 @@ import IMG5 from '../assets/images/shoe5.png';
 import IMG6 from '../assets/images/shoe6.png';
 import IMG7 from '../assets/images/p241.png';
 
+interface Shoe {
+  id: string;
+  name: string;
+  details: string;
+  steps: string;
+  sole: string;
+  fabricColor: string;
+  laces: string;
+  image: string;
+}
 
 
-export const shoesData = [
+
+export const shoesData: Shoe[] = [
   {
     id: '1',
     name: 'Running Shoe X',

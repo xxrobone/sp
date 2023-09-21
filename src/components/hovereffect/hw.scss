@@ -1,6 +1,6 @@
 // using this for now, might chnage to styled components
 
-.container {
+.wrapper {
     margin: 2rem auto;
     display: flex;
     position: relative;
@@ -15,18 +15,19 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: clamp(300px, 50vw, 400px);
+    width: clamp(300px, 350vw, 500px);
   }
   
   .item-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding-bottom: 5px;
     border-bottom: 1px dashed antiquewhite;
+    margin-right: 2rem;
   }
   .item-header-heading {
-    width: 50%;
+    width: 100%;
     font-size: clamp(1.25rem, 1.75vw, 1.75rem);
     font-weight: bold;
     text-transform: uppercase;

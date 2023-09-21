@@ -1,5 +1,10 @@
 import './App.scss';
-import { Route, createBrowserRouter, RouterProvider, createRoutesFromElements } from 'react-router-dom';
+import {
+  Route,
+  createBrowserRouter,
+  RouterProvider,
+  createRoutesFromElements,
+} from 'react-router-dom';
 import HoverEffect from './components/hovereffect/HoverEffect';
 import image1 from './assets/images/nike4.png';
 import image2 from './assets/images/nike3.png';
@@ -7,16 +12,16 @@ import swoosh from './assets/images/nikeswoosh.png';
 import Sidebar from './components/sidebar/Sidebar';
 import Magnetic from './components/magnetic/magnetic';
 import Home from './pages/home/Home';
+import Item from './pages/home/Item';
 
 import { motion, AnimatePresence } from 'framer-motion';
 import Info from './components/info/Info';
-
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/'>
       <Route index element={<Home />} />
-      <Route path='/latest' element={''} />
+      <Route path='/:id' element={<Item />} />
       <Route path='/latest' element={''} />
     </Route>
   )

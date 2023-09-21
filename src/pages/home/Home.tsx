@@ -64,8 +64,8 @@ const Home = () => (
         <h1>Latest releases: </h1>
       </motion.div>
       <motion.div variants={stagger} className='row'>
-        {shoesData.map(({ id, name, image, steps }) => (
-          <Link key={id} to={`/[${id}]`}>
+        {shoesData.map(({ name, image, steps, id }) => (
+          <Link key={id} to={`/${id}`}>
             <motion.div
               variants={fadeInUp}
               whileHover={{ scale: 1.05 }}

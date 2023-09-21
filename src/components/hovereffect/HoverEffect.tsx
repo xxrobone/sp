@@ -27,7 +27,7 @@ const HoverEffect = ({ img1, img2, title, subtitle, desc }: Props) => {
   return (
     <div>
       <motion.div
-        className='container'
+        className='wrapper'
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, type: 'spring' }}
         transition={{ duration: 0.6, delay: 2, ease: 'easeInOut' }}

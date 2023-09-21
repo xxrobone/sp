@@ -1,0 +1,201 @@
+@use '../../styles/base/' as *;
+
+// for id Fullscreen items page
+.fullscreen {
+    padding: 10rem 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: $color-bg;
+  
+    @media screen and (max-width: 680px) {
+      width: 100%;
+      height: unset;
+    }
+  
+    .go_back {
+      cursor: pointer;
+      color: #282828;
+      background-color: #f8f8f8;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      position: fixed;
+      left: 30%;
+      top: 100vh;
+      transition: all 0.4s ease;
+      z-index: 100;
+  
+      &:hover {
+        background-color: #ee4e34;
+        color: white;
+      }
+
+      @media screen and (max-width: 680px) {
+        left: 20%;
+      }
+      @media screen and (max-width: 460px) {
+        padding: 0.5rem 1rem;
+        right: 10%;
+        top: 20%;
+        left: auto;
+      }
+    }
+  
+    .f_card {
+      margin: 10rem 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      @media screen and (max-width: 1180px) {
+        margin: 5rem auto 0 5rem;
+        width: 100%;
+      }
+      @media screen and (max-width: 680px) {
+      }
+      @media screen and (max-width: 460px) {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+      }
+  
+      .img {
+        position: absolute;
+        top: 20%;
+        left: 45%;
+        width: 100%;
+        height: 100%;
+        background: $color-client-2;
+        cursor: pionter;
+  
+        @media screen and (max-width: 680px) {
+          top: 30%;
+          left: 0;
+          position: relative;
+          width: 100%;
+          height: 40vh;
+        }
+        @media screen and (max-width: 460px) {
+          position: relative;
+          box-sizing: border-box;
+          padding: 0;
+          margin: 0;
+          top: 0;
+          right: 0;
+          left: 0;
+          width: 100%;
+          height: 40%;
+        }
+        img {
+          margin-top: 30%;
+          width: 100%;
+          filter: drop-shadow(1px 1px 1px #000000)
+          drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.825));
+          margin-bottom: 20rem;
+          object-fit: cover;
+  
+          @media screen and (max-width: 680px) {
+            margin-top: 30%;
+          }
+          @media screen and (max-width: 460px) {
+            position: relative;
+            margin: 20% 0 0 10%;
+            width: 80%;
+            height: unset;
+          }
+        }
+      }
+      .details {
+        margin: 10rem auto 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+  
+        @media screen and (max-width: 680px) {
+          position: absolute;
+          margin: 0;
+          top: 60%;
+          width: 100%;
+          z-index: 10;
+        }
+        @media screen and (max-width: 460px) {
+          position: relative;
+          padding: 0 0 0 4rem;
+          margin: 0 auto;
+          top: 0%;
+          width: 100%;
+          z-index: 10;
+        }
+        .inner {
+          margin: 0 0 0 20rem;
+          width: 40%;
+          position: relative;
+  
+          @media screen and (max-width: 1185px) {
+            width: 100%;
+            margin: 10rem 0 0 3rem;
+          }
+  
+          @media screen and (max-width: 680px) {
+            margin: 10rem 0 0 3rem;
+          }
+          @media screen and (max-width: 460px) {
+            margin: 1rem auto 1rem;
+          }
+  
+          .title {
+            color: #4e4e4e;
+            font-weight: 100;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 22px;
+          }
+  
+          h1 {
+            color: $color-client-2;
+            margin-bottom: 2rem;
+            -webkit-text-stroke: transparent !important;
+            background-color: black;
+            padding: 0.5rem 0;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            @media screen and (max-width: 680px) {
+              
+            }
+            @media screen and (max-width: 460px) {
+            }
+          }
+          p {
+            color: #eeecec;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0), 0 0 8px rgba(0, 0, 0, 1);
+            font-weight: 400;
+            width: 75%;
+            margin-bottom: 1rem;
+            @media screen and (max-width: 680px) {
+              width: 90%;
+            }
+            @media screen and (max-width: 460px) {
+            }
+          }
+          .additionals {
+            margin: 0.25rem 0 0.5rem;
+            span {
+              color: #4e4e4e;
+              @media screen and (max-width: 680px) {
+              }
+              @media screen and (max-width: 460px) {
+              }
+            }
+          }
+          .steps {
+            color: #f0f0f0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0), 0 0 8px rgba(0, 0, 0, 1);
+  
+            @media screen and (max-width: 460px) {
+            }
+          }
+        }
+      }
+    }
+  }
+  
