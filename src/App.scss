@@ -23,9 +23,11 @@
   }
 
   .img {
+    margin: 2rem 0 0 4rem;
     max-width: clamp(16rem, 30vw, 22rem);
     object-fit: cover;
     object-position: center;
     filter: drop-shadow(5px 5px 10px rgb(128, 128, 128));
+    cursor: pointer;
   }
 }

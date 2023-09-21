@@ -4,6 +4,9 @@ import image1 from './assets/images/nike4.png';
 import image2 from './assets/images/nike3.png';
 import swoosh from './assets/images/nikeswoosh.png';
 import Sidebar from './components/sidebar/Sidebar';
+import Magnetic from './components/magnetic/magnetic';
+
+import {motion} from 'framer-motion'
 
 function App() {
   return (
@@ -12,7 +15,12 @@ function App() {
       <h1>SneakerSpot</h1>
       <div>
         <h2>Collab with</h2>
-        <img src={swoosh} alt='swoosh' className='img'></img>
+        <Magnetic>
+          <motion.img src={swoosh} alt='swoosh' className='img'
+            whileHover={{ filter: 'drop-shadow(2px 2px 10px red)' }}
+            transition={{duration: 0.3, ease: 'easeOut'}}
+          ></motion.img>
+        </Magnetic>
       </div>
       <HoverEffect
         title="Air Force 1's"
