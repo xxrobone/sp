@@ -1,3 +1,6 @@
+@use './styles/base/colors' as *;
+@use './styles/base/fonts' as *;
+
 #root {
   width: 100%;
   min-height: 100vh;
@@ -13,11 +16,9 @@
   min-height: 100vh;
   justify-content: space-around;
 
-  > h1 {
-    font-size: 4rem;
-    font-family: var(--font-audio);
-    -webkit-text-stroke: 0.1rem black;
-    font-size: calc(3.5vmin + 2vmax);
+   h1 {
+    font-family: $font-alt;
+    -webkit-text-stroke: 0.1rem $color-client-3;
     color: transparent;
   }
 

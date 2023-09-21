@@ -1,12 +1,14 @@
-import './App.css';
+import './App.scss';
 import HoverEffect from './components/hovereffect/HoverEffect';
 import image1 from './assets/images/nike4.png';
 import image2 from './assets/images/nike3.png';
 import swoosh from './assets/images/nikeswoosh.png';
+import Sidebar from './components/sidebar/Sidebar';
 
 function App() {
   return (
     <div className='main'>
+      <Sidebar />
       <h1>SneakerSpot</h1>
       <div>
         <h2>Collab with</h2>

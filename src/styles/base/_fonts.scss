@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+
+
+$font-base: 'Helvetica Neue', monospace;
+$font-alt: 'Audiowide', cursive;
+$font-default: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+//font sizes in clamp might change it later... right now im trying that approach
+
+
+// font weight
+$font-thin: 100;
+$font-normal: 400;
+$font-semibold: 600;
+$font-bold: 800;
+
