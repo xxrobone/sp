@@ -9,7 +9,7 @@ $font-default: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
 Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
 //font sizes in clamp might change it later... right now im trying that approach
-
+$font-xs: clamp(0.6rem, 1vw, 0.8rem);
 
 // font weight
 $font-thin: 100;

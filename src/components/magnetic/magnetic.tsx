@@ -32,7 +32,7 @@ const Magnetic = ({ children }: Props) => {
       onMouseLeave={mouseLeave}
       ref={ref}
       animate={{ x, y }}
-      transition={{ type: 'spring' }}
+      transition={{ type: 'spring', stiffness: 100 }}
     >
       {children}
     </motion.div>

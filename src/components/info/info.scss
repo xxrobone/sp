@@ -1,0 +1,14 @@
+@use '../../styles/base/colors' as *;
+@use '../../styles/base/fonts' as *;
+
+.info {
+    position: fixed;
+    top: 0;
+    padding: 0 2rem;
+    text-align: center;
+
+    p {
+        color: $color-client-2;
+        font-size: $font-xs;
+    }
+}
