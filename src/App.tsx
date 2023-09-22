@@ -1,61 +1,39 @@
 import './App.scss';
-import {
-  Route,
-  createBrowserRouter,
-  RouterProvider,
-  createRoutesFromElements,
-} from 'react-router-dom';
-import HoverEffect from './components/hovereffect/HoverEffect';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/home/Home';
+import Item from './pages/item/Item';
+import Sidebar from './components/sidebar/Sidebar';
+/* import HoverEffect from './components/hovereffect/HoverEffect';
 import image1 from './assets/images/nike4.png';
 import image2 from './assets/images/nike3.png';
 import swoosh from './assets/images/nikeswoosh.png';
-import Sidebar from './components/sidebar/Sidebar';
+
 import Magnetic from './components/magnetic/magnetic';
-import Home from './pages/home/Home';
-import Item from './pages/home/Item';
+
 
 import { motion, AnimatePresence } from 'framer-motion';
-import Info from './components/info/Info';
+import Info from './components/info/Info'; */
 
-const router = createBrowserRouter(
+/* const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/'>
+    <Route path='/'  element={<Sidebar />}>
       <Route index element={<Home />} />
       <Route path='/:id' element={<Item />} />
       <Route path='/latest' element={''} />
+      <Route path='/' />
     </Route>
   )
-);
+); */
 
 function App() {
   return (
-    <div className='main'>
-      <Info />
+    <Router>
       <Sidebar />
-      <h1>SneakerSpot</h1>
-      <div>
-        <h2>Collab with</h2>
-        <Magnetic>
-          <motion.img
-            src={swoosh}
-            alt='swoosh'
-            className='img'
-            whileHover={{ filter: 'drop-shadow(2px 2px 10px red)' }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
-          ></motion.img>
-        </Magnetic>
-      </div>
-      <HoverEffect
-        title="Air Force 1's"
-        subtitle='2024'
-        desc='Only @sneakerspot'
-        img1={image1}
-        img2={image2}
-      />
-      <AnimatePresence>
-        <RouterProvider router={router} />
-      </AnimatePresence>
-    </div>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/:id' element={<Item />} />
+      </Routes>
+    </Router>
   );
 }
 

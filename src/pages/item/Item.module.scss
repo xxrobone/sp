@@ -1,17 +1,13 @@
 @use '../../styles/base/' as *;
 
 // for id Fullscreen items page
-.fullscreen {
+.wrapper {
     padding: 10rem 0;
     position: relative;
     height: 100%;
     width: 100%;
     background-color: $color-bg;
-  
-    @media screen and (max-width: 680px) {
-      width: 100%;
-      height: unset;
-    }
+    
   
     .go_back {
       cursor: pointer;
@@ -41,7 +37,7 @@
       }
     }
   
-    .f_card {
+    .card {
       margin: 10rem 0 0;
       display: flex;
       align-items: center;
@@ -61,15 +57,15 @@
   
       .img {
         position: absolute;
-        top: 20%;
+        top: 0%;
         left: 45%;
         width: 100%;
         height: 100%;
         background: $color-client-2;
-        cursor: pionter;
+        cursor: pointer;
   
         @media screen and (max-width: 680px) {
-          top: 30%;
+          top: 20%;
           left: 0;
           position: relative;
           width: 100%;
@@ -86,15 +82,17 @@
           width: 100%;
           height: 40%;
         }
-        img {
-          margin-top: 30%;
-          width: 100%;
+
+        > img {
+          padding: 30vh 0 0 5vw;
+          width: 40%;
+          height: auto;
           filter: drop-shadow(1px 1px 1px #000000)
           drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.825));
           margin-bottom: 20rem;
-          object-fit: cover;
-  
-          @media screen and (max-width: 680px) {
+          transform: scale(0.5);
+          
+        /*   @media screen and (max-width: 680px) {
             margin-top: 30%;
           }
           @media screen and (max-width: 460px) {
@@ -102,7 +100,7 @@
             margin: 20% 0 0 10%;
             width: 80%;
             height: unset;
-          }
+          } */
         }
       }
       .details {

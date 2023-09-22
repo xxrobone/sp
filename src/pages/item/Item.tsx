@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { shoesData } from '../../constants/shoesData';
-import './Item.modules.scss';
+import styles from './Item.module.scss';
 
 type ShoeParams = {
   id: string;
@@ -57,7 +57,7 @@ async function getShoe(id: string) {
 }
 
 // Usage example:
-const idToFind = '1'; // Replace with the ID you want to search for
+const idToFind = ''; // Replace with the ID you want to search for
 getShoe(idToFind)
   .then((shoe) => {
     console.log('Found Shoe:', shoe);
@@ -85,7 +85,7 @@ const Item = () => {
   }, [safeId]);
 
   if (!shoe) {
-    // If shoe data is not available yet, you can return a loading indicator or handle it as needed
+    // returning a loading component fi not data
     return <div>Loading...</div>;
   }
 
@@ -93,52 +93,57 @@ const Item = () => {
 
   return (
     <motion.div initial='initial' animate='animate' exit={{ opacity: 0 }}>
-      <div className='fullscreen'>
-        <Link to='/'>
-          <motion.div
-            initial={{ x: -1000, y: 0 }}
-            animate={{ x: 0, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.5 }}
-          >
-            <a className='go_back'>Go Back</a>
-          </motion.div>
-        </Link>
+    <div className={styles.wrapper}>
+      <Link to='/'>
+        <motion.span
+          initial={{ x: -1000, y: 0 }}
+          animate={{ x: 0, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+        >
+          <a className={styles.go_back}>Go Back</a>
+        </motion.span>
+      </Link>
 
-        <div className='f_card'>
-          <motion.div
-            className='img'
-            animate={{ opacity: 1 }}
-            initial={{ opacity: 0 }}
-          >
-            <motion.img
-              key={id}
-              src={`../${image}`}
-              animate={{ x: 0, opacity: 1 }}
-              initial={{ x: -400, opacity: 0 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.25 }}
-            />
-          </motion.div>
-          <div className='details'>
-            <motion.div variants={stagger} className='inner'>
-              <motion.div variants={fadeInUp}>
-                <span className='title'>Sneaker model: {name}</span>
-              </motion.div>
-              <motion.h1 variants={fadeInUp}>{name}</motion.h1>
-              <motion.p variants={fadeInUp}>{details}</motion.p>
-              <motion.div variants={fadeInUp} className='additionals'>
-                <span>Instructions: </span>
-                <span>How to use</span>
-              </motion.div>
-              <motion.div variants={fadeInUp}>
-                <span className='steps'>{steps}</span>
-              </motion.div>
+      <div className={styles.card}>
+        <motion.div
+          className={styles.img}
+          animate={{ opacity: 1 }}
+          initial={{ opacity: 0 }}
+        >
+          <motion.img
+            key={id}
+            src={`../${image}`}
+            animate={{ x: 0, opacity: 1 }}
+            initial={{ x: -400, opacity: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+          />
+        </motion.div>
+        <div className={styles.details}>
+          <motion.div variants={stagger} className={styles.inner}>
+            <motion.div variants={fadeInUp}>
+              <span className={styles.title}>Sneaker model: {name}</span>
             </motion.div>
-          </div>
+            <motion.h1 variants={fadeInUp}>{name}</motion.h1>
+            <motion.p variants={fadeInUp}>{details}</motion.p>
+            <motion.div variants={fadeInUp} className={styles.additionals}>
+              <span>Instructions: </span>
+              <span>How to use</span>
+            </motion.div>
+            <motion.div variants={fadeInUp}>
+              <span className={styles.steps}>{steps}</span>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
-    </motion.div>
+    </div>
+  </motion.div>
   );
 };
 
 export default Item;
+
+   
+
+
+

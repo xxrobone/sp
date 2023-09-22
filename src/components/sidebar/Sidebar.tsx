@@ -1,5 +1,6 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Magnetic from '../magnetic/magnetic';
+import { Link } from 'react-router-dom';
 
 // animation effects
 import { motion } from 'framer-motion';
@@ -8,9 +9,7 @@ import { motion } from 'framer-motion';
 import './sidebar.scss';
 import { FiLinkedin, FiGithub, FiCodepen, FiMail } from 'react-icons/fi';
 
-const Sidebar = () => {
-  useEffect(() => {}, []);
-
+const Sidebar: React.FC = () => {
   return (
     <motion.div
       className='sidebar'
@@ -20,45 +19,44 @@ const Sidebar = () => {
     >
       <div className='social'>
         <Magnetic>
-          <a
-            data-icon="email"
-            href='mailto:robertwagar@gmail.com'
+          <Link
+            data-icon='email'
+            to='mailto:robertwagar@gmail.com' // Use 'to' prop for Link
             target='_blank'
             rel='noreferrer noopener'
           >
             <FiMail className='soc-item soc-icon' />
-          </a>
+          </Link>
         </Magnetic>
         <Magnetic>
-          <a
-            data-icon="linkedin"
-            href='https://www.linkedin.com/in/robert-w%C3%A4gar-1b4661139/'
+          <Link
+            data-icon='linkedin'
+            to='https://www.linkedin.com/in/robert-w%C3%A4gar-1b4661139/' // Use 'to' prop for Link
             target='_blank'
             rel='noreferrer noopener'
           >
-            {' '}
             <FiLinkedin className='soc-item soc-icon' />
-          </a>
+          </Link>
         </Magnetic>
         <Magnetic>
-          <a
-            data-icon="github"
-            href='https://github.com/robonexx'
+          <Link
+            data-icon='github'
+            to='https://github.com/robonexx' // Use 'to' prop for Link
             target='_blank'
             rel='noreferrer'
           >
             <FiGithub className='soc-item soc-icon' />
-          </a>
+          </Link>
         </Magnetic>
         <Magnetic>
-          <a
-            data-icon="codepen"
-            href='https://codepen.io/robertwagar/pens/public'
+          <Link
+            data-icon='codepen'
+            to='https://codepen.io/robertwagar/pens/public' // Use 'to' prop for Link
             target='_blank'
             rel='noreferrer noopener'
           >
             <FiCodepen className='soc-item soc-icon' />
-          </a>
+          </Link>
         </Magnetic>
       </div>
     </motion.div>

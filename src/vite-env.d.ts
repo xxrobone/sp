@@ -5,3 +5,9 @@ declare module 'hover-effect' {
     const HoverEffect: any; 
     export default HoverEffect;
   }
+
+  // had to add for css types
+  declare module "*.styles" {
+    const value: {[key: string]: string};
+    export default value;
+  }

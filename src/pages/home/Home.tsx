@@ -2,6 +2,11 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { shoesData } from '../../constants/shoesData';
 import './Home.modules.scss';
+import Info from '../../components/info/Info';
+import HoverEffect from '../../components/hovereffect/HoverEffect';
+import image1 from '../../assets/images/nike4.png';
+import image2 from '../../assets/images/nike3.png';
+import swoosh from '../../assets/images/nikeswoosh.png';
 
 export type Shoe = {
   id: string;
@@ -50,11 +55,32 @@ const stagger = {
 
 const Home = () => (
   <motion.div
+    className='main'
     initial='initial'
     animate='animate'
     transition={{ duration: 1 }}
     exit={{ x: -500, opacity: 0 }}
   >
+    <Info />
+
+    <h1>SneakerSpot</h1>
+    <div>
+      <h2>Collab with</h2>
+      <motion.img
+        src={swoosh}
+        alt='swoosh'
+        className='img'
+        whileHover={{ filter: 'drop-shadow(2px 2px 10px red)' }}
+        transition={{ duration: 0.3, ease: 'easeOut' }}
+      ></motion.img>
+    </div>
+    <HoverEffect
+      title="Air Force 1's"
+      subtitle='2024'
+      desc='Only @sneakerspot'
+      img1={image1}
+      img2={image2}
+    />
     <div className='container'>
       <motion.div
         animate={{ opacity: 1 }}
